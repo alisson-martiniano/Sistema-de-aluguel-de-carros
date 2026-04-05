@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aluguel de Carros</title>
+  <link rel="stylesheet" href="carro.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="img/logo.PNG" alt="Logo da empresa">
+  </div>
+
+  <div class="container">
+    <h1>Simulador de Aluguel de Carros</h1>
+
+    <!-- Formulário principal -->
+    <form id="formAluguel">
+      <label for="carro">Categoria:</label>
+      <select id="carro" required>
+        <option value="">Selecione</option>
+        <option value="80">Econômico - R$80/dia</option>
+        <option value="120">Confort - R$120/dia</option>
+        <option value="200">Luxo - R$200/dia</option>
+      </select>
+
+      <label for="checkin">Check-in:</label>
+      <input type="date" id="checkin" required>
+
+      <label for="checkout">Check-out:</label>
+      <input type="date" id="checkout" required>
+
+      <button type="submit">Calcular e Salvar</button>
+    </form>
+
+    <!-- Exibe o resultado do cálculo -->
+    <div id="resultado"></div>
+
+    <!-- Lista de registros de aluguéis salvos -->
+    <h2>Histórico de Aluguéis</h2>
+    <input type="text" id="busca" placeholder="Buscar por categoria..." />
+    <ul id="listaAlugueis"></ul>
+  </div>
+
+  <script src="carro.js"></script>
+</body>
+</html>
